@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaji Cell Point</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+      <script>
+  function addToCart(name,price) {
+    var cart = localStorage.getItem('cart');
+    if (!cart) {
+        cart = [];
+    } else {
+        cart = JSON.parse(cart);
+    }
+
+    var product = { name:name,price:price};
+
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+    </script>
+</head>
+<body>
+
+    <!-- top navbar -->
+    <div class="top-navbar">
+        <p>WELCOME TO OUR SHOP</p>
+        <div class="icons">
+            <a href="login.html"><img src="./images/register.png" alt="" width="18px">Login</a>
+            <a href="register.html"><img src="./images/register.png" alt="" width="18px">Register</a>
+        </div>
+    </div>
+    <!-- top navbar -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" id="logo"><span id="span1">B</span>alaji  <span>Cell Point</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="./images/menu.png" alt="" width="30px"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#product-cards">Product</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                  <li><a class="dropdown-item" href="#product-cards">Mobile Phones</a></li>
+                  <li><a class="dropdown-item" href="#products-cards">Accessories</a></li>
+                 
+                  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="add-to-cart.html">cart</a>
+              </li>
+            </ul>
+            <form class="d-flex" id="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- navbar -->
+    
+
+
+
+
+
+
+    
+    <!-- home content -->
+    <section class="home">
+    <div class="content">
+      <h1> <span>Mobile Products</span>
+        <br>
+        Up To <span id="span2">50%</span> Off
+      </h1>
+      <p>Discover incredible deals on mobile phones with a jaw-dropping 50% off! <br>
+        From sleek designs to cutting-edge features, these discounted devices offer top-tier performance without breaking the bank.<br>
+        Whether you're looking for the latest flagship model or a budget-friendly option, there's something for everyone at half the price. <br>
+        Don't miss out on this unbeatable opportunity to upgrade your smartphone experience for less!
+      </p>
+      <a href="#product-cards"><div class="btn"><button>Shop Now</button></div></a>
+
+    </div>
+    <div class="img">
+      <img src="./images/Grph.webp" alt="">
+    </div>
+  </section>
+    <!-- home content -->
+
+
+
+
+
+
+
+
+    <!-- product cards -->
+    <div class="container" id="product-cards">
+      <h1 class="text-center">PRODUCTS</h1>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="/images/p6.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Iphone 13 pro</h3>
+              <p class="text-center">(12GB+256GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹15,00,000 <span><li  onclick="addToCart('Iphone 13 pro',1500000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/iq009.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">iqoo 9 5G</h3>
+              <p class="text-center">(8GB+128GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹34,990<span><li onclick="addToCart('iqoo 9 5G',34990)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/iqoo 12.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">iqoo 12</h3>
+              <p class="text-center">(12GB+256GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹50,000<span><li onclick="addToCart('iqoo 12',50000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/S24 Ultra.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Samsung s24 ultra</h3>
+              <p class="text-center">(12GB+256GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹1,20,000 <span><li onclick="addToCart('Samsung s24 ultra ',120000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/real 50.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Realme Narzo 50</h3>
+              <p class="text-center">(8Gb+128GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹20,000 <span><li onclick="addToCart('Realme Narzo 50 ',20000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/MI 14.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Xiaomi 14 Ultra</h3>
+              <p class="text-center">(12GB+256GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹62,000 <span><li onclick="addToCart('Xiaomi 14 Ultr ',62000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/phone1.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">iPhone x</h3>
+              <p class="text-center">(6GB+128GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹45,000 <span><li onclick="addToCart('Iphone 13 ',150000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/MI 13 Pro.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Mi 13 Pro</h3>
+              <p class="text-center">(6GB+64GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹35,000 <span><li onclick="addToCart('Mi 13 Pro',35000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="product-cards">
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="/images/i phone 15.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Iphone 15 pluse</h3>
+              <p class="text-center">(8GB+128GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹82,600 <span><li  onclick="addToCart('Iphone 15 pluse',82600)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/samsung s23.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Samsung s23</h3>
+              <p class="text-center">(12GB+256GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹65,000<span><li onclick="addToCart('samsung s23',65000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/one pluse12R.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">One Pluse 12R</h3>
+              <p class="text-center">(16GB+256GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹45,000<span><li onclick="addToCart('One Pluse 12R',45000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/nothing 2.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Nothing 2</h3>
+              <p class="text-center">(8GB+128GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹34,000 <span><li onclick="addToCart('Nothing 2 ',34000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/redmi 13.jpg " alt="">
+            <div class="card-body">
+              <h3 class="text-center">Realme Note 13 5G</h3>
+              <p class="text-center">(6Gb+128GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹17,000 <span><li onclick="addToCart('Realme Note 13 5G ',17000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/1qo z5.webp" alt="">
+            <div class="card-body">
+              <h3 class="text-center">iQo Z5</h3>
+              <p class="text-center">(12GB+256GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹20,000 <span><li onclick="addToCart('IQO Z5 ',20000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/one pluse ce3.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">One Pluse CE 3 Lite 5G <h3>
+              <p class="text-center">(8GB+128GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹16,000<span><li onclick="addToCart('One pluse CE 3 Lite ',16000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/oppo.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Oppo F25 Pro 5G</h3>
+              <p class="text-center">(8GB+128GB)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹23,000 <span><li onclick="addToCart('Oppo F25 Pro 5G',23000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- product cards -->
+
+
+
+
+
+
+
+
+
+    <!-- other cards -->
+    <div class="container" id="other-cards">
+      <div class="row">
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/banner2.jpeg" alt="">
+            <div class="card-img-overlay">
+              <h3>Best Mobiles</h3>
+              <h5>Latest Collection</h5>
+              <p>Up To 50% Off</p>
+              <button id="shopnow">Shop Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/c2.png" alt="">
+            <div class="card-img-overlay">
+              <h3>Best Headphone</h3>
+              <h5>Latest Collection</h5>
+              <p>Up To 50% Off</p>
+              <button id="shopnow">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- other cards -->
+   
+
+
+
+
+
+
+    <!-- banner -->
+    <section class="banner" >
+      <div class="content">
+        <h1> <span>Electronic Gadget</span>
+          <br>
+          Up To <span id="span2">50%</span> Off
+        </h1>
+        <p>Elevate your tech game with accessories now available at an amazing 50% off!<br>
+           From stylish phone cases to high-quality chargers and headphones,<br>
+            these discounted accessories are the perfect complement to your devices.<br>
+             Whether you're looking to protect your phone in style or enhance your audio experience,<br>
+              you'll find unbeatable deals on top brands and must-have accessories. <br>
+              Don't miss out on this limited-time offer to accessorize your tech life for less!<br
+        </p>
+        <a href="#products-cards"><div class="btn"><button>Shop Now</button></div></a>
+  
+      </div>
+      <div class="img">
+        <img src="./images/AC.webp" alt="">
+      </div>
+    </section>
+    <!-- banner -->
+
+
+
+
+
+
+
+
+    <!-- product cards -->
+    <div class="container" id="product-cards">
+      <h1 class="text-center">Accessories</h1>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Char.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Charger</h3>
+              <p class="text-center">(60WT)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹1200 <span><li onclick="addToCart('Charger',1200)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Cable.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Cable</h3>
+              <p class="text-center">(1 Meter)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹900 <span><li onclick="addToCart('Cable ',900)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Sony E.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Sony Earbuds</h3>
+              <p class="text-center">Special Audio</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹4,500 <span><li onclick="addToCart('Sony Earbud ',4500)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Marshall.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Marshall Headphones</h3>
+              <p class="text-center">Dolby</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹12,000 <span><li onclick="addToCart('Marshall Headphones ',12000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- other cards -->
+    <div class="container" id="other">
+      <div class="row">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/banner.jpg" alt="">
+            <div class="card-img-overlay">
+              <h3>Mobile Phone</h3>
+              <p>Latest collection Up To 50% Off</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/c4.png" alt="">
+            <div class="card-img-overlay">
+              <h3>Gaming Gadget</h3>
+              <p>Latest collection Up To 50% Off</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/c5.png" alt="">
+            <div class="card-img-overlay">
+              <h3>Electronic Gadget</h3>
+              <p>Latest collection Up To 50% Off</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- other cards -->
+
+
+
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Airpods 2.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Airpods 2</h3>
+              <p class="text-center">Noice Cancellation</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹12,000 <span><li onclick="addToCart('Airpods 2 ',12000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Sony Head.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Sony Headphones</h3>
+              <p class="text-center">Touch Control</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹8000 <span><li onclick="addToCart('Sony Headphones',8000)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Airpod Case.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Airpods Case</h3>
+              <p class="text-center">Silicone</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹350<span><li onclick="addToCart('Airpods Cas ',350)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Normal Case.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Normal earbuds case</h3>
+              <p class="text-center">Rubber</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹450 <span><li onclick="addToCart('Normal earbuds case',450)"
+                class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Screen Gaurd.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Screen Gaurd</h3>
+              <p class="text-center">(Transprent)</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹150 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr10.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Power Bank</h3>
+              <p class="text-center">1000M</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹2,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Earphones.jpg" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Earphones</h3>
+              <p class="text-center">3.5mm Audio Jack</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹300 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/Ear(black).webp" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Earphones(wired)</h3>
+              <p class="text-center">With Mic</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹500 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- product cards -->
+
+
+
+
+
+
+
+
+
+    <!-- offer -->
+    <div class="container" id="offer">
+      <div class="row">
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>Free Shipping</h3>
+          <p>On order over ₹10000</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-rotate-left"></i>
+          <h3>Free Returns</h3>
+          <p>Within 30 days</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-truck"></i>
+          <h3>Fast Delivery</h3>
+          <p>World Wide</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h3>Big choice</h3>
+          <p>Of products</p>
+        </div>
+      </div>
+    </div>
+    <!-- offer -->
+
+
+
+
+
+    
+    <!-- newslater -->
+    <div class="container" id="newslater">
+      <h3 class="text-center">Subscribe To The Electronic Shop For Latest upload.</h3>
+      <div class="input text-center">
+        <input type="text" placeholder="Enter Your Email..">
+        <button id="subscribe">SUBSCRIBE</button>
+      </div>
+    </div>
+    <!-- newslater -->
+
+
+
+
+
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Mobile shop</h3>
+              <p>
+                New Kaleswararao Market,<br>
+                One Town. <br>
+                Vijayawada-520001<br>
+              </p>
+              <strong>Phone:</strong> 8309597357<br>
+              <strong>Email:</strong> electronicshop@.com <br>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Usefull Links</h4>
+             <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policey</a></li>
+             </ul>
+            </div>
+
+
+
+           
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+
+             <ul>
+              <li><a href="#">Mobile Phone</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Cases & Covers</a></li>
+              <li><a href="#">Gaming Head Sets</a></li>
+              <li><a href="#">Screen Cards</a></li>
+              <li><a href="#">Chargers</a></li>
+
+
+
+             </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              <p>Instagram:balajicellpoint2024</p><br>
+              <p>What'sapp:8309597357</p>
+
+
+              <div class="socail-links mt-3">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container py-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>balaji Cell Point</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="#">Ankith</a>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+
+
+
+
+
+
+    <a href="#" class="arrow"><i><img src="./images/arrow.png" alt=""></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

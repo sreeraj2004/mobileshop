@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Page</title>
+  <!-- <link rel="stylesheet" href="payment.css"> -->
+  <style>
+    @charset "UTF-8";
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f2f2;
+  position: relative;
+  font-family: arial;
+}
+body * {
+  box-sizing: border-box;
+}
+
+.forms {
+  display: block;
+  position: relative;
+}
+.forms label {
+  font-family: arial;
+  font-size: 10px;
+  font-size: 0.7142857143rem;
+  text-align: left;
+  display: inline-block;
+  width: 92%;
+  margin-bottom: 5px;
+}
+.forms__input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: inline-block;
+  box-shadow: inset 0 0 0;
+  height: 40px;
+  border-radius: 4px;
+  /* -webkit-appearance: none; */
+}
+.forms__input--large {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+.forms__input--small {
+  width: 20%;
+  display: inline-block;
+}
+
+.btn {
+  text-transform: uppercase;
+  border: 2px solid #000;
+  background: none;
+  padding: 10px 40px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn--checkout:before {
+  font-family: FontAwesome;
+  content: "";
+  padding-right: 5px;
+}
+
+.container {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.6666666667%;
+}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0.8333333333%;
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 990px) {
+  .container {
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0.5555555556%;
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0.4166666667%;
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+.card {
+  position: relative;
+  display: block;
+}
+.card__form__expiry {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.card__form__expiry span {
+  display: inline-block;
+  font-size: 12px;
+  font-size: 0.8571428571rem;
+}
+.card__box {
+  padding: 30px 50px;
+  width: 100%;
+  background: #fff;
+  margin: 10px auto;
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 2px 4px #dadada;
+  clear: both;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .card__box {
+    width: 50%;
+  }
+}
+@media (min-width: 990px) {
+  .card__box {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .card__box {
+    max-width: 50%;
+  }
+}
+.card__miniHeader {
+  display: block;
+  position: relative;
+  width: 83.3333333333%;
+  margin: 20px auto;
+  clear: both;
+}
+@media (min-width: 768px) {
+  .card__miniHeader {
+    width: 50%;
+  }
+}
+.card__miniHeader h2 {
+  font-size: 18px;
+  font-size: 1.2857142857rem;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.4;
+}
+.card__miniHeader p {
+  margin: 5px 0;
+  font-size: 13px;
+  font-size: 0.9285714286rem;
+  line-height: 1.2;
+}
+.card__miniHeader p span {
+  font-weight: bold;
+}
+.card__info {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  clear: both;
+}
+@media (min-width: 768px) {
+  .card__info {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+.card__info p {
+  font-size: 10px;
+  font-size: 0.7142857143rem;
+  line-height: 1;
+}
+.card__waitingForBank {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+  z-index: 100;
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.5s ease;
+}
+.card__waitingForBank h3 {
+  margin-top: 30%;
+}
+.card__waitingForBank--open {
+  transform: translate3d(0, 0, 0);
+}
+
+.summary {
+  background: #fff;
+  padding: 30px 0.4166666667%;
+  position: relative;
+}
+.summary .container {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .summary .container {
+    max-width: 66.6666666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .summary .container {
+    max-width: 50%;
+  }
+}
+.summary__step {
+  width: 33.3333333333%;
+  float: left;
+  padding-left: 0.8333333333%;
+  padding-right: 0.8333333333%;
+  text-align: center;
+}
+.summary__step__link {
+  width: 68%;
+  height: 3px;
+  position: relative;
+  background: #808080;
+  top: -12px;
+  left: 68%;
+  z-index: 1;
+}
+.summary__step__link--active {
+  background: #00ADEF;
+}
+@media (min-width: 768px) {
+  .summary__step__link {
+    width: 70%;
+  }
+}
+@media (min-width: 990px) {
+  .summary__step__link {
+    width: 80%;
+    left: 63%;
+  }
+}
+/* @incloude uber {
+  .summary__step__link {
+    width: 85%;
+    left: 60%;
+  }
+} */
+.summary__step__text {
+  display: block;
+  margin-top: 10px;
+  color: #202020;
+  font-size: 13px;
+  font-size: 0.9285714286rem;
+}
+.summary__step__text:last-child {
+  margin-top: 15px;
+}
+.summary__step__icon {
+  background: #808080;
+  padding: 10px 15px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  font-size: 1.1428571429rem;
+}
+.summary__step__icon--active {
+  background: #00ADEF;
+}
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link rel="stylesheet" href="https://use.fontawesome.com/06ca245214.css">
+
+<section class="summary">
+  
+  <div class="container">
+  
+  <div class="summary__step">
+    <span class="summary__step__icon summary__step__icon--active">1</span>
+    <div class="summary__step__link summary__step__link--active"></div>
+    <span class="summary__step__text">Review Cart</span>
+  </div>
+  
+  <div class="summary__step">
+    
+    <span class="summary__step__icon summary__step__icon--active">2</span>
+    <div class="summary__step__link"></div>
+    <span class="summary__step__text">Payment Details</span>
+  </div>
+  
+  <div class="summary__step">
+    <span class="summary__step__icon">3</span>
+    <span class="summary__step__text">Completed Notification</span>
+  </div>
+  
+  </div>
+  
+</section>
+
+<section class="card">
+  
+  <div class="container">
+    
+    <div class="card__miniHeader">
+      
+      <h2>Payment Checkout</h2>
+      <p>Enter your card details below.(Currently we 
+        only accept Visa and Mastercard)
+      </p>
+    </div>
+    
+    <div class="card__box">
+      
+      <div class="card__waitingForBank"> 
+        <h3>LOADING</h3>
+      </div>
+      
+      <form name="card" class="forms">
+        <label for="number">Card number</label>
+        <input type="text" name="number"  class="forms__input forms__input--large" required />
+        
+        <label for="name">Card name</label>
+        <input type="text" name="name"  class="forms__input forms__input--large" required />
+        
+        <div class="card__form__expiry">
+          <label>Card expiry</label>
+          <input type="text" name="expMonth" class="forms__input forms__input--small" required />
+          <span>/</span>
+          <input type="text" name="expYear" required class="forms__input forms__input--small" required />
+          
+        </div>
+        
+        <div class="card__form__cvc">
+          <label>Security number</label>
+          <input type="text" class="forms__input forms__input--small" name="cvc" required />
+          
+<!--            <p>The last 3 digits on the back of the card</p> -->
+          
+        </div>
+        
+        
+      </form>
+    
+    
+    </div>
+    
+    <!-- end of box -->
+    
+    <div class="card__info">
+      
+     <a href="index.html"><button class="btn btn--checkout click" onclick="success()">Pay securely</button></a>
+        
+      <p>This is secure</p>
+      
+      <p>All of your personal details are safe</p>
+      
+      
+    </div>
+    
+  </div>
+  
+  <!-- end of container -->
+  
+
+</section>
+
+<!-- end of card page -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script>
+    function success(){
+  alert('your payment received successfully and order placed successfully');
+}
+  </script>
+
+</body>
+</html>
